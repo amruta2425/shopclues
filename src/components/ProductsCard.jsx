@@ -1,8 +1,11 @@
 import React from 'react'
 import {BsArrowRight}  from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/ShopCluesSlice';
 
 const ProductsCard = ({products}) => {
+  const dispatch = useDispatch()
   const navigate =useNavigate()
   const _id = products.title;
   const idString =(_id) =>{
@@ -36,7 +39,19 @@ const ProductsCard = ({products}) => {
             <p className = "line-through text-gray-500">${products.oldPrice}</p>
             <p className = "font-semibold">${products.price}</p>
             </div>
-            <p className = "absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex-items-center gap-1 top-0 -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500">Add to Cart{""}
+            <p onClick={()=>
+            dispatch(
+              addToCart({
+                _id: products._id,
+                title: products.title,
+                image: products.image,
+                price: products.price,
+                quantity: 1,
+                description: products.description,
+                })
+              )
+            } 
+            className = "absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex-items-center gap-1 top-0 -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500">Add to Cart{""}
             <span>
               <BsArrowRight/>
             </span>
