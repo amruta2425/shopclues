@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { ToastContainer,toast } from 'react-toastify';
 import { logoLight } from "../assets/index.jsx";
 import { cart } from '../assets/index.jsx';
-import{profile } from '../assets/index.jsx';
+import {profile } from '../assets/index.jsx';
 
 const Header = () => {
+  
   const productData = useSelector((state) => state.shopClues.productData);
   console.log(productData);
   return (
@@ -28,13 +30,24 @@ const Header = () => {
             <img className ="w-10 h-10"src={cart} alt="cart"/>
             {/* <img className ="w-10 h-10 ml-20"src={profile} alt="cart"/> */}
             <span className = "absolute w-15 top-2 left-0 text-sm flex items-center justify-center font-semibold">
-                0
+                {productData.length}
             </span>
             
             </div>
         </div>
         </div>
-        
+        <ToastContainer
+        position = "top-left"
+        autoClose = {2000}
+        hideProgressBar = {false}
+        newestOnTop = {false}
+        closeOnClick 
+        rtl = {false}
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+        theme ="dark"
+        />   
     </div>
   )
 }
