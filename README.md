@@ -32,7 +32,7 @@
 ### To start the game, run the following command:
 
 ``` 
-npm start 
+  npm start 
 
 ```
 
