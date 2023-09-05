@@ -17,15 +17,22 @@
 - To run the Tic Tac Toe game locally on your machine, follow these steps:
 
 1. Clone the repository:
-  - git clone https://github.com/amruta2425/shopclues.git
-  - cd tic-tac-toe-react
+```
+  git clone https://github.com/amruta2425/shopclues.git
+  cd tic-tac-toe-react
+```
 
 2. Install the dependencies:
-  - npm install
+```
+  npm install
+```
 
 
 # Usage
 ### To start the game, run the following command:
 
-- npm start
+``` 
+npm start 
+
+```
 
