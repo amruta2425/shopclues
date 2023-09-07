@@ -14,12 +14,12 @@
 
 # Installation
 
-- To run the Tic Tac Toe game locally on your machine, follow these steps:
+- To run the Shopclues locally on your machine, follow these steps:
 
 1. Clone the repository:
 ```
   git clone https://github.com/amruta2425/shopclues.git
-  cd tic-tac-toe-react
+  cd shopclues
 ```
 
 2. Install the dependencies:
