@@ -13,8 +13,8 @@ const Footer = () => {
             <div className = "flex flex-col gap-7">
                 <img className = "w-32" src={logoDark} alt="logoDark" />
                 <p className = "text-white text-sm tracking-wide">© ShopClues.com </p>
-                <img className = "w-56" src={payment1} alt="payment" />
-            
+                {/* <img className = "w-56" src={payment1} alt="payment" />
+             */}
                 <div className = "flex gap-5 text-lg text-gray-400">
                 <ImGithub className = "h-8 w-8 hover:text-white duration-300 cursor-pointer"/>
                 <FaYoutube className = "h-8 w-8hover:text-white duration-300 cursor-pointer"/>
